@@ -1,0 +1,164 @@
+body {
+    background: #1eff8a;
+}
+
+.timeline-container {
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+    padding: 50px 0;
+    counter-reset: year 2011;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    width: calc(16.66% - 6px);
+}
+
+.timeline__data {
+    height: 80px;
+    width: 100%;
+    background-color: #e63043;
+    position: relative;
+    margin-top: 100px;
+    top: 30px;
+}
+
+.timeline__data:after {
+    content: '';
+    font-size: 60px;
+    position: absolute;
+    left: 40px;
+    bottom: -70px;
+    color: #e63043;
+    display: block;
+}
+
+.data--circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e63043;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.data--circle:before {
+    content: '';
+    width: 3px;
+    height: 167px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -167px;
+    z-index: 2;
+}
+
+.data--circle:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000000;
+    position: absolute;
+    bottom: -178px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.icon {
+    color: #ffffff;
+    font-size: 60px;
+}
+
+/* SECOND ELEMENT */
+
+.timeline-reverse {
+    flex-direction: column-reverse;
+}
+
+.data-box {
+    margin-bottom: 265px;
+    top: 130px;
+}
+
+.data-box:after {
+    font-size: 60px;
+    position: absolute;
+    left: 40px;
+    top: -70px;
+    color: #e63043;
+}
+
+.bottom--circle {
+    background-color: #e63043;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bottom--circle:before {
+    content: '';
+    width: 3px;
+    height: 167px;
+    background-color: #000000;
+    position: absolute;
+    top: -167px;
+    z-index: 2;
+}
+
+.bottom--circle:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000000;
+    position: absolute;
+    top: -180px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline__data {
+    counter-increment: year;
+}
+
+.timeline__data:after {
+    content: counter(year);
+}
+
+/* BACKGROUND COLOR */
+
+.data--first {
+    background-color: var(--first-color);
+}
+
+.data--second {
+    background-color: var(--second-color);
+}
+
+.data--third {
+    background-color: var(--third-color);
+}
+
+.data--fourth {
+    background-color: var(--fourth-color);
+}
+
+.data--fifth {
+    background-color: var(--fifth-color);
+}
+
+.data--sixth {
+    background-color: var(--sixth-color);
+}
+
+.img-color {
+    filter: brightness(0) invert(1);
+}
